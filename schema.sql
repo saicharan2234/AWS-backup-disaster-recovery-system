@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS backup_system;
+USE backup_system;
+
+CREATE TABLE IF NOT EXISTS files (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    file_size BIGINT DEFAULT 0
+);
